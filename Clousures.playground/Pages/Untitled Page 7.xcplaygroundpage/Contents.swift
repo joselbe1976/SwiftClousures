@@ -37,3 +37,37 @@ count(1)
 
  //forma de ejecutar 2
 createCounter()(1)
+
+
+//creamos un array
+let marxBrothers = ["Chicco", "Harpo", "Zeppo","Groucho"]
+let loveCities = ["Madrid", "Valencia", "Palencia","Teruel","Alovera","PozoRrubio"]
+
+func orderBigArray(a: [String]) -> [String]{
+    return a.sorted()
+}
+
+func orderSmallArray(a: [String]) -> [String]{
+    //imagine that are diferents forms of sort
+    return a.reversed()
+}
+
+func selectSortMethod(a: [String]) -> ([String])->([String]){
+    if a.count > 4{
+        return orderBigArray
+    }
+    else{
+        return orderSmallArray
+    }
+}
+
+//funcion que me devuelve un trozo de codigo y lo ejecutamos
+selectSortMethod(a: marxBrothers)(marxBrothers)
+selectSortMethod(a: loveCities)(loveCities)
+
+
+
+
+
+
+
