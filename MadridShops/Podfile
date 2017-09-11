@@ -1,0 +1,24 @@
+
+platform :ios, '10.0'
+
+target 'MadridShops' do
+  use_frameworks!
+
+
+  def common_pods
+  	# pods comunes a todos los targets
+  	pod 'DotsLoading'
+    pod 'FillableLoaders', '~>1.3.0'
+  end
+
+
+  common_pods
+  
+
+  # Pods for MadridShops
+  target 'MadridShopsTests' do
+    common_pods
+
+  end
+
+end

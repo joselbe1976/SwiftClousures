@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         
         
-        let downloadShopsInteractor : DownloadAllShopsInteractor = DownloadAllShopsInteractorFakeImplementation()
+        let downloadShopsInteractor : DownloadAllShopsInteractor = DownloadShopsInteractorNSOPimpl()
         /*
             downloadShopsInteractor.execute(onSuccess: { (shops: Shops) in
                 // OK
