@@ -56,7 +56,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="93"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-lR-oSq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5A6-lR-oSq">
                                                     <rect key="frame" x="13" y="20" width="57" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,11 +84,52 @@
                     <navigationItem key="navigationItem" title="Shops" largeTitleDisplayMode="always" id="qZi-LQ-OfD"/>
                     <connections>
                         <outlet property="collection" destination="ebU-Ls-yyr" id="D4p-Vm-bg5"/>
+                        <segue destination="Jye-B2-CO8" kind="show" identifier="ShowShopDetailSegue" id="48J-pr-2uD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="373.91304347826087" y="154.89130434782609"/>
+        </scene>
+        <!--Shop Detail View Controller-->
+        <scene sceneID="fp6-Lr-lWU">
+            <objects>
+                <viewController id="Jye-B2-CO8" customClass="ShopDetailViewController" customModule="MadridShops" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ob4-Al-hk2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNw-Xg-Du1">
+                                <rect key="frame" x="7" y="64" width="400" height="661"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dab-l3-aoH">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="334"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">Lorem fistrum caballo blanco caballo negroorl está la cosa muy malar pupita te va a hasé pupitaa papaar papaar por la gloria de mi madre diodenoo benemeritaar llevame al sircoo. No te digo trigo por no llamarte Rodrigor amatomaa apetecan mamaar torpedo por la gloria de mi madre diodeno ahorarr. Pecador a gramenawer me cago en tus muelas no te digo trigo por no llamarte Rodrigor. Caballo blanco caballo negroorl ese hombree no te digo trigo por no llamarte Rodrigor quietooor qué dise usteer ahorarr apetecan apetecan quietooor. Hasta luego Lucas pecador amatomaa te voy a borrar el cerito pupita hasta luego Lucas ese pedazo de. Ese hombree al ataquerl condemor diodeno no puedor. Diodenoo te va a hasé pupitaa a wan a peich apetecan de la pradera no puedor caballo blanco caballo negroorl.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="syt-eA-uCc">
+                                        <rect key="frame" x="0.0" y="361" width="374" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="ArR-uC-uf0"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageShop" destination="syt-eA-uCc" id="2ip-50-agI"/>
+                        <outlet property="textDetail" destination="Dab-l3-aoH" id="kg7-Uc-46s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaW-Yd-McC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237.68115942029" y="164.67391304347828"/>
         </scene>
         <!--Navegador!!!!-->
         <scene sceneID="gfh-kB-7eO">
@@ -120,7 +161,4 @@
             <point key="canvasLocation" x="-407" y="155"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="photo.jpg" width="900" height="900"/>
-    </resources>
 </document>

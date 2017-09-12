@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         
         
-        let downloadShopsInteractor : DownloadAllShopsInteractor = DownloadShopsInteractorNSOPimpl()
+        let downloadShopsInteractor : DownloadAllShopsInteractor = DownloadShopsInteractorNSURLSessionImple()
         /*
             downloadShopsInteractor.execute(onSuccess: { (shops: Shops) in
                 // OK
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
         downloadShopsInteractor.execute(onSuccess: { (shops: Shops) in
             //OK
-            print(shops.get(index: 0).name)
+            print(Thread.current.description)
             self.shops = shops
             
             self.collection.delegate = self
@@ -45,6 +45,23 @@ class ViewController: UIViewController {
         })
         
         
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let shop  = self.shops?.get(index: indexPath.row) //asigno la tienda
+        
+        self.performSegue(withIdentifier: "ShowShopDetailSegue", sender: shop) //lanzamos el secue
+    }
+    
+    //envia el Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ShowShopDetailSegue" {
+            let vc = segue.destination as! ShopDetailViewController //cast a la clase para acceder a sus atrinutos
+            //let indexPath =  self.collection.indexPathsForSelectedItems![0] //extraigo la tienda uw me han tocado
+            vc.shop =  sender as! Shop // self.shops?.get(index: indexPath.row) //asigno la tienda
+        }
     }
 
     

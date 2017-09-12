@@ -19,26 +19,9 @@ class DownloadShopsInteractorNSOPimpl : DownloadAllShopsInteractor{
                 //data tiene los bytes del JSON
                 do{
             
-                
-                    let jsonObject = try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String, Any>  //convertimos en un diccionario
-                    
-                    
-                    let result = jsonObject["result"] as! [Dictionary<String, Any>]  //lo convertimos a un array de diccionarios
-                    
-                    let shops = Shops()
-                    
-                    
-                    for shopjson in result{
-                        
-                        let tienda = Shop(name: shopjson["name"] as! String)
-                        tienda.address = shopjson["address"]  as! String
-                        tienda.logo = shopjson["logo_img"]  as! String
-                        tienda.description = shopjson["description_en"]  as! String
-                        
-                        shops.add(shop: tienda)
-                        
-                        
-                    }
+                    //parseamos
+                    let shops = parseShops(data: data as Data)
+
                     
                     //ejecutamos la clausura devolviendo las tiendas
                         OperationQueue.main.addOperation {
@@ -49,9 +32,7 @@ class DownloadShopsInteractorNSOPimpl : DownloadAllShopsInteractor{
                     
                     
                     
-                } catch{
-                    
-                }
+                } catch{}
             }
         }
         }

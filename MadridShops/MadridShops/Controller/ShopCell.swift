@@ -21,7 +21,11 @@ class ShopCell: UICollectionViewCell {
         
         //asigna los Outlets
         self.tituloLabel.text = self.shop?.name
-        
+        self.shop?.logo.loadImage(into: imagen)
+        imagen.clipsToBounds = true
+        UIView.animate(withDuration: 1.0) {
+            self.imagen.layer.cornerRadius = 30
+        }
     }
     
 }
