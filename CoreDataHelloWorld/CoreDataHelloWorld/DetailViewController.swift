@@ -40,6 +40,26 @@ class DetailViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func deleteEvent(_ sender: Any) {
+        
+        //extraemos el contexto
+        let context = detailItem?.managedObjectContext
+        
+        context?.delete(detailItem!)
+        
+        do{
+            try context?.save()
+        }
+        catch {
+            
+        }
+        
+        
+      //  self.navigationController?.popViewController(animated: true)
+        
+    }
+    
 
 }
 

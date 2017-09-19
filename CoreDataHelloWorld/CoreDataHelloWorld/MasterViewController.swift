@@ -40,8 +40,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     @objc
     func insertNewObject(_ sender: Any) {
-        let context = self.fetchedResultsController.managedObjectContext
+        guard  let context = self.managedObjectContext else { return }
         let newEvent = Event(context: context)
+        
+        let shop = Shop(context: context)
+        shop.name = "Mi Tienda"
+        
              
         // If appropriate, configure the new managed object.
         newEvent.timestamp = Date()
@@ -133,6 +137,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
+        
+        // fetchRequest = select * from table order by xxxxxx
+        
         let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController

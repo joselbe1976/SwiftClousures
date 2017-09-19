@@ -87,8 +87,8 @@
 		D83856A81F688A1C00C1C79D /* CoreDataHelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				D83856D11F6893AE00C1C79D /* CoreDataStack.swift */,
 				D83856A91F688A1C00C1C79D /* AppDelegate.swift */,
+				D83856D11F6893AE00C1C79D /* CoreDataStack.swift */,
 				D83856AE1F688A1C00C1C79D /* MasterViewController.swift */,
 				D83856B01F688A1C00C1C79D /* DetailViewController.swift */,
 				D83856B21F688A1C00C1C79D /* Main.storyboard */,

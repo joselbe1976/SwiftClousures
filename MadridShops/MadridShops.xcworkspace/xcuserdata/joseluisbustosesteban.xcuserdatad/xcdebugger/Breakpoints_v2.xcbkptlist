@@ -6,33 +6,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MadridShops/Controller/MainViewController.swift"
-            timestampString = "526861986.612768"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MadridShops/Controller/MainViewController.swift"
-            timestampString = "526861986.613162"
+            timestampString = "527121427.935915"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "animateView()"
-            landmarkType = "7">
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -42,11 +26,11 @@
                   moduleName = "MadridShops"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joseluisbustosesteban/Desktop/Keepcoding/Master/06.IOS%20Avanzado/SwiftClousures/MadridShops/MadridShops/Controller/MainViewController.swift"
-                  timestampString = "526944653.937938"
+                  timestampString = "527554774.346163"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
                   offsetFromSymbolStart = "14">
                </Location>
                <Location
@@ -57,11 +41,11 @@
                   moduleName = "MadridShops"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joseluisbustosesteban/Desktop/Keepcoding/Master/06.IOS%20Avanzado/SwiftClousures/MadridShops/MadridShops/Controller/MainViewController.swift"
-                  timestampString = "526944653.941667"
+                  timestampString = "527554774.350074"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -84,12 +68,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MadridShops/Controller/ViewController.swift"
-            timestampString = "526944653.820992"
+            timestampString = "527554774.235007"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "collectionView(_:didDeselectItemAt:)"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

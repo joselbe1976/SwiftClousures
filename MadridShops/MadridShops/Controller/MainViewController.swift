@@ -1,13 +1,15 @@
 
 import UIKit
 
-import DotsLoading
-import FillableLoaders
 
+import FillableLoaders
+import CoreData
 
 class MainViewController: UIViewController {
 
     var  myLoader : WavesLoader?
+    var context : NSManagedObjectContext!
+    
     
     
     override func viewDidLoad() {
@@ -74,6 +76,15 @@ class MainViewController: UIViewController {
                 v.frame = newFrame
             }
             
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ShopShopSegue"{
+            let vcx = segue.destination as! ViewController
+            vcx.context = self.context
         }
     }
     
